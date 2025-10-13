@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('../background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+  }
+  
+  /* CONTACT CONTAINER */
+  .contacts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3rem;
+    align-items: center;
+  }
+  
+  /* CONTACT ROW BASE */
+  .contact-row {
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  /* LAYOUT CONFIGURATION */
+  .contact-row:nth-child(1) {
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+  }
+  
+  .contact-row:nth-child(n+2) {
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+  }
+  
+  /* BASE CARD STYLE */
+  .contact-card {
+    background: rgba(29, 28, 28, 0.75);
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+    text-align: center;
+    backdrop-filter: blur(8px);
+    color: #fdee91;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* SIZE HIERARCHY */
+  .contact-row:nth-child(1) .contact-card {
+    padding: 2.6rem 1.5rem;
+    font-size: 1.1rem;
+    box-shadow: 0 6px 32px rgba(255, 222, 145, 0.25);
+  }
+  
+  .contact-row:nth-child(n+2) .contact-card {
+    padding: 2rem 1.2rem;
+    font-size: 1rem;
+    box-shadow: 0 5px 28px rgba(255, 222, 145, 0.18);
+  }
+  
+  /* HOVER EFFECT */
+  .contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 36px rgba(255, 222, 145, 0.3);
+  }
+  
+  /* TEXT STYLING */
+  .contact-name {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-designation {
+    font-size: 1em;
+    color: #fdee91;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-number {
+    font-size: 0.95em;
+    color: #fff;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* COPY BUTTON */
+  .copy-btn {
+    background: #fdee91;
+    color: #222;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+  }
+  
+  .copy-btn:hover {
+    background: #e6d881;
+  }
+  
+  /* RESPONSIVENESS */
+  @media (max-width: 900px) {
+    .contact-row {
+      grid-template-columns: repeat(1, minmax(240px, 1fr)) !important;
+    }
+  }

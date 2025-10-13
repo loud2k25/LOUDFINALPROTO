@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Committees | LOUD</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Vogue&display=swap" rel="stylesheet">
+
+  <style>
+    iframe {
+      display: none;
+    }
+    body {
+      background-size: cover;
+      min-height: 100vh;
+    }
+
+    /* Mobile display behavior for committees iframe */
+    @media (max-width: 768px) {
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      iframe {
+        margin-top: 100px;
+        display: block;
+        width: 100%;
+        height: 400px;
+        border: none;
+      }
+      .committee-box {
+        display: none !important;
+      }
+      .committees {
+        padding: 0;
+      }
+      footer {
+        position: fixed;
+        bottom: 0;
+        display: none;
+      }
+    }
+
+    /* Navbar text glow */
+    .navbar-nav .nav-link {
+      color: #fdee91 !important;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .navbar-nav .nav-link:hover {
+      text-shadow: 0 0 10px #fdee91;
+    }
+
+    /* Register button visibility for mobile collapse */
+    .navbar-collapse .register-mobile {
+      display: none;
+    }
+    @media (max-width: 991px) {
+      .navbar-collapse .register-mobile {
+        display: block;
+        text-align: center;
+        margin-top: 1rem;
+      }
+      .navbar-collapse .register-mobile .register-btn {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar navbar-expand-lg fixed-top" style="background: #091b0c83;">
+    <div class="container-fluid d-flex justify-content-between align-items-center px-3">
+      <a href="../index.html#home" class="d-flex align-items-center text-decoration-none" style="width:80%;">
+        <img src="../leadlogo.png" alt="LEAD Logo" class="lead-logo me-2">
+        <div class="lead-text">
+          <h2 class="m-0">LEAD</h2>
+          <p class="m-0">Loyola Engagement in Advocacy and Diplomacy</p>
+        </div>
+      </a>
+
+      <!-- Bootstrap toggler -->
+      <button class="navbar-toggler text-warning border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="fs-1">&#9776;</span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+        <ul class="navbar-nav mb-2 mb-lg-0 gap-4">
+          <li class="nav-item"><a class="nav-link" href="../index.html#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#committees">Committees</a></li>
+          <li class="nav-item"><a class="nav-link" href="../rules/rules.html">Rules</a></li>
+          <li class="nav-item"><a class="nav-link" href="../sec/secretariat.html">Secretariat</a></li>
+          <li class="nav-item"><a class="nav-link" href="../contact/contacts.html">Contact</a></li>
+        </ul>
+
+        <!-- Register button for mobile (inside collapse) -->
+        <div class="register-mobile">
+          <a href="https://registrationloud.lovable.app/" target="_blank">
+            <button class="register-btn">Register</button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Register button for large screens -->
+      <div class="register d-none d-lg-block">
+        <a href="https://registrationloud.lovable.app/" target="_blank">
+          <button class="register-btn">Register</button>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- COMMITTEES SECTION -->
+  <section class="committees fade-in" id="committees">
+    <div class="top-row">
+      <div class="committee-box" onclick="redirect('lmun.html')">
+        <img src="../leadlogoc.png" alt="L'CHAOS Logo" class="committee-logo">
+        <h3>L'CHAOS</h3>
+      </div>
+      <div class="committee-box" onclick="redirect('ldorado.html')">
+        <img src="../leadlogoc.png" alt="L'DORADO Logo" class="committee-logo">
+        <h3>L'DORADO</h3>
+      </div>
+    </div>
+
+    <div class="bottom-row">
+      <div class="committee-box" onclick="redirect('disec.html')">
+        <img src="../leadlogoc.png" alt="DISEC Logo" class="committee-logo">
+        <h3>UNGA-DISEC</h3>
+      </div>
+      <div class="committee-box" onclick="redirect('loksabha.html')">
+        <img src="../leadlogoc.png" alt="LOK SABHA Logo" class="committee-logo">
+        <h3>LOK SABHA</h3>
+      </div>
+      <div class="committee-box" onclick="redirect('lorps.html')">
+        <img src="../leadlogoc.png" alt="L'ORPS Logo" class="committee-logo">
+        <h3>L'ORPS</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile-specific iframe -->
+  <iframe src="mobile-committees.html" frameborder="0"></iframe>
+
+  <!-- FOOTER -->
+  <footer class="footer fade-in">
+    <p>©️ 2025 Loyola Union Debate | All Rights Reserved</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Fade Transition -->
+  <script>
+    function redirect(url) {
+      document.body.classList.add('fade-out');
+      setTimeout(() => { window.location.href = url; }, 400);
+    }
+  </script>
+</body>
+</html>

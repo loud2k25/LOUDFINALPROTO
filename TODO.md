@@ -1,0 +1,5 @@
+- [x] Update comms/committees.html: Replace navbar with Bootstrap version, adjust links, add Bootstrap deps, change logo width to 60%, add custom styles, remove hamburger.
+- [x] Update rules/rules.html: Same as above.
+- [x] Update sec/secretariat.html: Same as above.
+- [x] Update contact/contacts.html: Same as above.
+- [x] Test the changes by running the site.

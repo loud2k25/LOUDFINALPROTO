@@ -256,7 +256,7 @@ body::-webkit-scrollbar {
 }
 
 .glass-btn:hover {
-  background: rgba(255, 255, 255, 0.726);
+  /* background: rgba(255, 255, 255, 0.726); */
   /* color: #08160a; */
   /* box-shadow: 0 0 25px #9fff9f; */
   transform: scale(1.05);
